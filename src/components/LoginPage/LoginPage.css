@@ -1,0 +1,103 @@
+.login-page-container {
+
+    /* margin top moet weg! */
+    margin-top: 200px;
+
+    width: 100%;
+    height: calc(100vh - 400px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.login-page-content-container {
+    width: 374px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.login-page-title {
+    margin-bottom: 12px;
+}
+.login-page-title-text {
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.login-page-form-container {
+    width: 374px;
+}
+.login-page-input-container {
+    display: flex;
+    flex-direction: column;
+}
+input {
+    width: 100%;
+    border: 1px solid #0E0E0C;
+    border-radius: 5px;
+    background: none;
+    padding: 10px;
+    margin-bottom: 12px;
+}
+/* Target only text inputs */
+input[type="text"] {
+    width: 100%;
+    border: 1px solid #0E0E0C;
+    border-radius: 5px;
+    background: none;
+    padding: 10px;
+    margin-bottom: 12px;
+}
+
+/* Style checkboxes */
+.checkbox-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center; /* Center-align checkboxes vertically */
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 0; /* Remove any default margin */
+    appearance: auto; /* Remove default checkbox appearance */
+}
+
+.checkbox-container input[type="checkbox"]::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #0E0E0C;
+    background-color: #E3E3E1;
+    cursor: pointer;
+}
+
+.checkbox-container input[type="checkbox"]:checked::before {
+    background-color: #0E0E0C;
+}
+.registrate-extra-info {
+    margin-top: 12px;
+    font-size: 0.8rem;
+    color: #0E0E0C;
+}
+
+.login-page-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+button {
+    width: 180px;
+    height: 45px;
+    border-radius: 22px;
+    color: #FFF;
+    font-size: 1rem;
+    background-color: #0E0E0C;
+    border: none;
+}
