@@ -1,9 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Navigation.css';
 
 const Navigation = () => {
- 
-
     return (
         <nav id="navigation">
             <div id="menuToggle">
@@ -13,11 +12,10 @@ const Navigation = () => {
                 <span></span>
                 
                 <ul id="menu">
-                    <a href="#"><li>Home</li></a>
-                    <a href="#"><li>Leaderboard</li></a>
-                    <a href="#"><li>How to play</li></a>
-                    <a href="#"><li>Account</li></a>
-                    <a href="#"><li>Log out</li></a>
+                    <li><Link to="/gamepage">Home</Link></li>
+                    <li><Link to="/leaderboard">Leaderboard</Link></li>
+                    <li><Link to="/how-to-play">How to play</Link></li>
+                    <li><Link to="/">Log out</Link></li>
                 </ul>
             </div>
 

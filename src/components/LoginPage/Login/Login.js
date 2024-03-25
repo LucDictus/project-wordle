@@ -24,7 +24,7 @@ function LoginPage() {
                         <div className="login-page-button-container">
                             <button className="login-page-button">
                                 Log in
-                                <Link to="/home">Inloggen</Link>
+                                <Link to="/gamepage">Inloggen</Link>
                             </button>
                         </div>
                     </form>
