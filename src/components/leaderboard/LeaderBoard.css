@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Average+Sans&display=swap");
+
+.leaderboard {
+  font-family: "Average Sans", sans-serif;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+.leaderboard-entry {
+  display: flex;
+  align-items: flex-start;
+}
+.rank {
+  margin-right: 5px;
+  font-weight: 600;
+  font-size: 25px;
+  width: 20px;
+}
+.name {
+  margin-left: 10px;
+}
+li {
+  background-color: #d7d7d7;
+  list-style-type: none;
+  margin-bottom: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.score {
+  margin-right: 10px;
+}
+
+li.first {
+  background-color: #aca727;
+}
+
+li.second {
+  background-color: #b2b2b2;
+}
+
+li.third {
+  background-color: #814a22;
+}
+
+@media (max-width: 767px) {
+  .leaderboard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  li {
+    border-radius: 70px;
+    width: 80vw;
+  }
+}

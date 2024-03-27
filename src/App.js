@@ -1,26 +1,22 @@
-// App.js
-import React from 'react';
+// app.js
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import StartPage from './components/StartPage/StartPage';
-import Login from './components/LoginPage/Login/Login';
-import Registrate from './components/LoginPage/Registrate/Registrate';
-import GamePage from './components/GamePage/GamePage';
-import useToken from './api/useToken';
+import StartPage from './components/StartPage/StartPage.js';
+import HomePage from './components/HomePage/HomePage.js';
+import Login from './components/LoginPage/Login/Login.js';
+import Registrate from './components/LoginPage/Registrate/Registrate.js';
 
 function App() {
-  const { token, setToken } = useToken();
-
   return (
-    <div className="App">
-      <Router>
+    <Router>
+      <div className="App">
         <Routes>
           <Route path="/" element={<StartPage />} />
-          <Route path="/login" element={<Login setToken={setToken} />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/registrate" element={<Registrate />} />
-          <Route path="/gamepage" element={<GamePage />} />
+          <Route path="/home" element={<HomePage />} />
         </Routes>
-      </Router>
-    </div>
+      </div>
+    </Router>
   );
 }
 
