@@ -103,9 +103,10 @@ const GamePage = () => {
       <Navigation />
       <div className='container'>
         <h2>Guess the Word (You have {chances} chances left)</h2>
-        <div className="guess-inputs">
-          {guesses.map((guess, index) => (
-            <input
+        <div className='guesses'>
+          <div className="guess-inputs">
+            {guesses.map((guess, index) => (
+              <input
               key={index}
               ref={(ref) => (inputRefs.current[index] = ref)}
               value={guess}
@@ -113,22 +114,23 @@ const GamePage = () => {
               onKeyPress={handleKeyPress} // Handle "Enter" key press
               maxLength={1}
               disabled={isGameOver}
-          />
-          ))}
+              />
+              ))}
+          </div>
+          <div className="guess-feedbacks">
+            {feedbacks.map((item, index) => (
+              <div style={{ display: "flex", justifyContent: "center" }} key={index}>
+                {item.guess.split('').map((letter, i) => (
+                  <span key={i} style={{backgroundColor: item.feedback[i]}} className="feedback-letter">
+                    {letter}
+                  </span>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
         {result && <div>{result}</div>}
         <button onClick={guess} disabled={isGameOver}>Guess</button>
-        <div className="guess-feedbacks">
-          {feedbacks.map((item, index) => (
-            <div style={{ display: "flex" }} key={index}>
-              {item.guess.split('').map((letter, i) => (
-                <span key={i} style={{backgroundColor: item.feedback[i]}} className="feedback-letter">
-                  {letter}
-                </span>
-              ))}
-            </div>
-          ))}
-        </div>
                 
       </div>
     </div>
